@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- HTML5 olduğunu belirtir, her HTML sayfasının en üstünde olmalı -->
+
+<html lang="en">
+  <!-- Sayfa dili İngilizce olarak belirtilmiş. Türkçe içerik olduğu için lang="tr" da olabilir. -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Türkçe karakterlerin (ç,ş,ğ vs.) doğru görüntülenmesini sağlar -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mobil uyumlu tasarım için; ekran genişliğine göre içerik ayarlaması yapar -->
+
+    <title>Document</title>
+    <!-- Sekmede görünen başlık -->
+
+    <!-- CSS dosyasını projeye bağlar -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap ikon kütüphanesini bağlar; simgeleri kolayca kullanmak için -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===== Header (üst menü) başlangıç ===== -->
+    <div class="navbar">
+      <!-- Logo alanı -->
+      <div class="nav-logo border">
+        <div class="logo">
+          <img src="./images/amazon_logo.png" alt="" width="150px" />
+          <!-- Amazon logosu; responsive görüntü için genişlik verilmiş -->
+        </div>
+      </div>
+
+      <!-- Teslimat adresi alanı -->
+      <div class="nav-address border">
+        <p class="add-first">Deliver To</p>
+        <div class="add-icon">
+          <i class="bi bi-geo-alt-fill"></i>
+          <!-- Konum simgesi (Bootstrap Icons'tan gelir) -->
+          <p class="add-second">Türkiye</p>
+        </div>
+      </div>
+
+      <!-- Arama çubuğu -->
+      <div class="nav-search">
+        <select class="search-select">
+          <!-- Arama kategorileri -->
+          <option>Hepsi</option>
+          <option>Elektronik</option>
+          <option>Ev</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Ara Amazon.com.tr"
+          class="search-input"
+        />
+        <div class="search-icon">
+          <i class="bi bi-search"></i>
+          <!-- Arama simgesi -->
+        </div>
+      </div>
+
+      <!-- Giriş yap & Hesap -->
+      <div class="nav-signin border">
+        <p><span>Merhaba, Giriş yapın</span></p>
+        <p class="nav-second">Hesap ve Listeler</p>
+      </div>
+
+      <!-- Kategoriler -->
+      <div class="nav-signin border">
+        <p><span>Merhaba</span></p>
+        <p class="nav-second">Kategoriler</p>
+      </div>
+
+      <!-- İadeler ve Siparişler -->
+      <div class="nav-return border">
+        <p><span>İadeler</span></p>
+        <p class="nav-second">ve Siparişler</p>
+      </div>
+
+      <!-- Sepet -->
+      <div class="nav-cart border">
+        <i class="bi bi-cart-fill"></i> Sepet
+      </div>
+    </div>
+
+    <!-- Üst panel -->
+    <div class="panel">
+      <div class="panel-all">
+        <i class="bi bi-list"></i>Tümü
+        <!-- Menü simgesi -->
+      </div>
+      <div class="panel-ops">
+        <!-- Paneldeki link seçenekleri -->
+        <p class="border">Gülümseten Kasım Fırsatları</p>
+        <p class="border">Çok Satanlar</p>
+        <p class="border">Prime</p>
+        <p class="border">Yeni Çıkanlar</p>
+        <p class="border">Hediye Fikirleri</p>
+      </div>
+      <div class="panel-deals border">Elektronik'te alışveriş fırsatları</div>
+    </div>
+
+    <!-- Hero (Kapak) alanı -->
+    <div class="hero-section">
+      <div class="hero-msg">
+        Amazon.com'dasınız. Ayrıca hızlı yerel teslimatla milyonlarca ürün
+        için Amazon Türkiye'den alışveriş yapabilirsiniz.
+        <a href=""> Amazon.tr'ye gitmek için buraya tıklayın.</a>
+      </div>
+    </div>
+
+    <!-- Alışveriş bölümleri -->
+    <div class="shop-section">
+      <!-- Her bir box bir kategori kartı -->
+        <div class="box">
+        <div class="box-content">
+          <h2>Giyim</h2>
+          <div class="box-img" style="background-image:url(./images/image-1.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+        <div class="box">
+        <div class="box-content">
+          <h2>Kişisel Bakım</h2>
+          <div class="box-img" style="background-image:url(./images/image-2.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+        <div class="box">
+        <div class="box-content">
+          <h2>Mobilya</h2>
+          <div class="box-img" style="background-image:url(./images/image-3.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+        <div class="box">
+        <div class="box-content">
+          <h2>Elektronik</h2>
+          <div class="box-img" style="background-image:url(./images/image-4.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+        <div class="box">
+        <div class="box-content">
+          <h2>Güzellik Ürünleri</h2>
+          <div class="box-img" style="background-image:url(./images/image-5.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+        <div class="box">
+        <div class="box-content">
+          <h2>Evcil Hayyvan Bakımı</h2>
+          <div class="box-img" style="background-image:url(./images/image-6.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+        <div class="box">
+        <div class="box-content">
+          <h2>Yeni Oyuncaklar</h2>
+          <div class="box-img" style="background-image:url(./images/image-7.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+       <div class="box">
+        <div class="box-content">
+          <h2>Modayı Keşfet</h2>
+          <div class="box-img" style="background-image:url(./images/image-8.jpg)"></div>
+          <p>Daha Fazla</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Başlangıç -->
+    <div class="foot-panel1">
+      <a href="">Başa Dön</a>
+    </div>
+
+    <div class="foot-panel2">
+      <!-- Dört sütunluk bilgilendirme alanı -->
+      <ul>
+        <p>Hakkımızda</p>
+        <a href="">Kariyer</a>
+        <a href="">İletişim</a>
+        <a href="">Bilgi Toplumu Hizmetleri</a>
+        <a href="">Amazon Science</a>
+      </ul>
+         <ul>
+        <p>Bizimle Para Kazanın</p>
+        <a href="">Markanızı Koruyun ve Oluşturun</a>
+        <a href="">Amazon'da Satış Yapın</a>
+        <a href="">Bilgi Toplumu Hizmetleri</a>
+        <a href="">Ürünlerinizin Reklamını Yapın</a>
+      </ul>
+         <ul>
+        <p>Amazon Ödeme Araçları</p>
+        <a href="">Kredi Kartı</a>
+        <a href="">Taksitli Ödeme</a>
+      </ul>
+         <ul>
+        <p>Size Yardımcı Olalım</p>
+        <a href="">Kargoları Takip Edin veya siparişleri Görüntüleyin</a>
+        <a href="">Covid-19 ve Amazon</a>
+        <a href="">Geri Dönüşüm</a>
+        <a href="">Amazon Science</a>
+        <a href="">Erişebilirlik</a>
+        <a href="">Müşteri Hizmetleri</a>
+        <a href="">Teslimat Ücretleri ve Politikaları, İadeler</a>
+      </ul>
+    </div>
+  </body>
+</html>

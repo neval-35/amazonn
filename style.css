@@ -1,0 +1,316 @@
+/* Google Fonts'tan "Poppins" fontunu içeri aktarıyoruz. Bu yazı tipini tüm sayfada kullanacağız. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Tüm öğeler için varsayılan stilleri sıfırlıyoruz ve yazı tipini ayarlıyoruz */
+* {
+  margin: 0; /* Kenar boşluklarını sıfırla */
+  padding: 0; /* İç boşlukları sıfırla */
+  box-sizing: border-box; /* Taşmayı önlemek için kutu boyutlandırma ayarı */
+  font-family: "Poppins", sans-serif; /* Tüm yazılar "Poppins" yazı tipiyle yazılacak */
+}
+
+/* ================== NAVBAR (üst menü) ALANI ================== */
+
+.navbar {
+  background-color: #0f1111; /* Navbar arka plan rengi siyaha yakın */
+  height: 60px; /* Yüksekliği 60 piksel */
+  width: 100%; /* Genişlik ekranın tamamı */
+  display: flex; /* Öğeleri yatay hizalamak için flexbox kullanılıyor */
+  color: white; /* Yazı rengi beyaz */
+  justify-content: space-evenly; /* Öğeler eşit boşlukla dağılır */
+  align-items: center; /* Dikeyde ortalanır */
+}
+
+.nav-logo {
+  height: 50px; /* Yüksekliği 50 piksel */
+  width: 100px; /* Genişliği 100 piksel */
+  display: flex; /* İçeriği yatay hizalamak için flex */
+  justify-content: center; /* Ortala */
+  align-items: center; /* Ortala */
+}
+
+.logo img {
+  width: 100%; /* Genişlik kapsayıcının tamamı */
+  height: 50px; /* Sabit yükseklik */
+}
+
+.border {
+  border: 1px solid transparent; /* Başlangıçta görünmeyen kenarlık */
+  height: 100%; /* Yükseklik kapsayıcı kadar */
+  display: grid; /* İçeriği hem yatay hem dikey ortalamak için */
+  place-items: center; /* Grid içindeki tüm içerikleri ortala */
+  padding: 2px; /* Çok az iç boşluk */
+}
+
+.border:hover {
+  border: 1px solid white; /* Üzerine gelince beyaz kenarlık görünür */
+  cursor: pointer; /* Üzerine gelindiğinde imleç el simgesine döner */
+}
+
+.add-first {
+  font-size: 13.6px; /* Küçük boy yazı */
+  color: #cccccc; /* Gri renk */
+  margin-left: 3px; /* Soldan boşluk */
+}
+
+.add-icon {
+  display: flex; /* İkon ve metni yatay hizalamak için */
+  align-items: center; /* Dikeyde ortala */
+}
+
+.add-second {
+  font-size: 16px; /* Normal yazı boyutu */
+  margin-left: 3px; /* İkonla yazı arasında boşluk */
+}
+
+.nav-search {
+  display: flex; /* Arama kutusu ve ikonlarını yatay hizalamak için */
+  justify-content: space-evenly; /* Öğeler arasında eşit boşluk */
+  background-color: pink; /* Arama kutusunun arka plan rengi */
+  width: 620px; /* Genişlik sabit */
+  height: 40px; /* Yükseklik sabit */
+  border-radius: 4px; /* Köşeler hafif yuvarlatılmış */
+}
+
+.search-select {
+  background-color: #f3f3f3; /* Açılır menü arka planı */
+  text-align: center; /* Yazı ortalanır */
+  border: none; /* Kenarlık yok */
+  outline: none; /* Tıklanınca kenarlık çıkmaz */
+  width: 60px; /* Genişlik sabit */
+  border-radius: 4px 0 0 4px; /* Sol köşeler yuvarlak */
+}
+
+.search-input {
+  width: 100%; /* Genişlik kalan alan kadar */
+  border: none; /* Kenarlık yok */
+  outline: none; /* Kenar efekti yok */
+  text-indent: 10px; /* Yazı başlangıcı içten boşluk */
+}
+
+.search-icon {
+  background-color: #fabd68; /* Arama butonunun rengi turuncu */
+  width: 45px; /* Sabit genişlik */
+  display: flex; /* İkon ortalansın diye */
+  align-items: center; /* Dikeyde ortala */
+  justify-content: center; /* Yatayda ortala */
+  border-radius: 0 4px 4px 0; /* Sağ köşeler yuvarlatılmış */
+  color: black; /* İkon rengi siyah */
+}
+
+span {
+  font-size: 12px; /* Küçük yazı boyutu */
+}
+
+.nav-second {
+  font-size: 14px; /* Biraz daha büyük yazı */
+  font-weight: 800; /* Kalın yazı */
+}
+
+.nav-cart {
+  display: flex; /* Sepet ikonuyla yazıyı hizalamak için */
+  justify-content: center; /* Ortala */
+  align-items: center; /* Ortala */
+  font-size: 14px; /* Yazı boyutu */
+  font-weight: 800; /* Kalın yazı */
+}
+
+.nav-cart i {
+  font-size: 30px; /* Sepet ikonunun boyutu büyük */
+}
+
+/* ================== PANEL ALANI ================== */
+
+.panel {
+  background-color: #222e3d; /* Panelin koyu mavi arka planı */
+  color: white; /* Yazılar beyaz */
+  display: flex; /* Öğeler yatayda hizalanır */
+  justify-content: space-evenly; /* Eşit boşlukla dağılır */
+  align-items: center; /* Dikeyde ortalanır */
+  height: 40px; /* Yükseklik sabit */
+}
+
+.panel-ops p {
+  display: inline-flex; /* Paragraflar yanyana sıralanır */
+  height: 40px; /* Yükseklik sabit */
+  padding: 0 3px; /* Yatayda boşluk */
+  margin-left: 15px; /* Soldan boşluk */
+}
+
+.panel-ops {
+  width: 70%; /* Panelin %70'ini kaplar */
+  font: 14px; /* Yazı boyutu */
+}
+
+.panel-deals {
+  padding: 0 3px; /* Yatay boşluk */
+  font-size: 14px; /* Yazı boyutu */
+  font-weight: 700; /* Kalın yazı */
+}
+
+/* ================== HERO ALANI ================== */
+
+.hero-section {
+  background-image: url("./images/hero_image.jpg"); /* Arka plana resim konur */
+  height: 350px; /* Sabit yükseklik */
+  background-size: cover; /* Resim ekranı tamamen kaplasın */
+  display: flex; /* Ortalamak için flex */
+  justify-content: center; /* Yatayda ortala */
+  align-items: end; /* Dikeyde alta yasla */
+}
+
+.hero-msg {
+  background-color: white; /* Beyaz arka plan kutusu */
+  width: 80%; /* Genişlik ekranın %80'i */
+  height: 40px; /* Sabit yükseklik */
+  display: flex; /* İçeriği ortalamak için */
+  justify-content: center; /* Ortala */
+  align-items: center; /* Ortala */
+  margin-bottom: 25px; /* Alttan boşluk */
+  font-size: 14px; /* Yazı boyutu */
+}
+
+.hero-msg a {
+  color: #92bdc6; /* Maviye yakın bağlantı rengi */
+  text-decoration: none; /* Altı çizili değil */
+  margin-left: 3px; /* Yazıdan boşluk */
+}
+/* ================== SHOP (ürün kartları) ALANI ================== */
+
+.shop-section {
+  display: flex; /* Ürün kutularını yan yana dizmek için esnek kutu modeli kullanılır */
+  flex-wrap: wrap; /* Eğer ekran yetmezse alt satıra geçilir */
+  justify-content: space-evenly; /* Ürünler eşit boşluklarla dizilir */
+  background-color: #e2e7e6; /* Açık gri arka plan */
+  padding: 20px 0; /* Üstten ve alttan boşluk bırakılır */
+}
+
+.box {
+  height: 400px; /* Kutu yüksekliği sabit */
+  width: 23%; /* Sayfanın yaklaşık dörtte biri kadar genişlik */
+  background-color: white; /* Kutu içi beyaz */
+  padding: 20px 0 15px; /* İç boşluk: üstte 20px, altta 15px */
+  margin-top: 15px; /* Kutuların üstü arasında boşluk olur */
+}
+
+.box-img {
+  height: 300px; /* Görselin yüksekliği sabit */
+  background-size: cover; /* Görsel tamamen sığdırılır */
+  background-position: center; /* Görsel ortalanır */
+  margin-top: 1rem; /* Üstten boşluk */
+  margin-bottom: 1px; /* Alttan boşluk */
+  border-radius: 7px;
+}
+
+.box-content {
+  margin-bottom: 1rem; /* Sağ boşluk */
+  
+}
+.box-content h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-content p {
+  color: #007185; /* Paragraf (link gibi) rengi koyu mavi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================== FOOTER (sayfa altı) ALANI ================== */
+
+footer {
+  margin-top: 15px; /* Üstte boşluk */
+}
+
+.foot-panel1 {
+  background-color: #37475a; /* Koyu mavi arka plan */
+  color: white; /* Yazı rengi beyaz */
+  height: 50px; /* Yükseklik sabit */
+  display: flex; /* İçeriği ortalamak için esnek kutu */
+  justify-content: center; /* Yatayda ortala */
+  align-items: center; /* Dikeyde ortala */
+  font-size: 13px; /* Küçük yazı */
+}
+
+.foot-panel1:hover {
+  cursor: pointer; /* Üzerine gelince imleç el simgesine dönüşür */
+  text-decoration: underline; /* Yazının altı çizilir */
+}
+
+.foot-panel2 {
+  background-color: #222f3d; /* Daha koyu mavi */
+  color: white; /* Yazılar beyaz */
+  display: flex; /* Kutular yan yana dizilir */
+  justify-content: space-evenly; /* Eşit aralıklarla dizilir */
+  padding: 20px 0; /* Üstten ve alttan boşluk */
+}
+
+ul {
+  list-style: none; /* Madde işaretleri kaldırılır */
+}
+
+ul p {
+  font-weight: bold; /* Başlıklar kalın yazılır */
+  margin-bottom: 10px; /* Altına boşluk bırakılır */
+}
+
+ul a {
+  display: block; /* Her bağlantı satır olarak dizilir */
+  color: white; /* Yazı beyaz */
+  font-size: 14px; /* Yazı boyutu */
+  margin-bottom: 8px; /* Altına boşluk bırakılır */
+  text-decoration: none; /* Altı çizili olmaz */
+}
+
+ul a:hover {
+  text-decoration: underline; /* Üzerine gelince altı çizilir */
+}
+
+.foot-panel3 {
+  background-color: #222f3d; /* Aynı koyu mavi arka plan */
+  color: white; /* Yazılar beyaz */
+  border-top: 1px solid white; /* Üstte beyaz çizgi */
+  height: 70px; /* Yükseklik sabit */
+  display: flex; /* İçeriği ortalamak için flex */
+  justify-content: center; /* Ortala */
+  align-items: center; /* Ortala */
+}
+
+.logo {
+  width: 100px; /* Logo genişliği sabit */
+}
+
+.logo img {
+  width: 100%; /* Görsel kutunun tamamını kaplar */
+  height: 50px; /* Yüksekliği sabit */
+}
+
+.foot-panel4 {
+  background-color: #0f1111; /* En koyu arka plan */
+  color: white; /* Yazılar beyaz */
+  text-align: center; /* Ortalanmış yazılar */
+  height: 80px; /* Yükseklik sabit */
+  font-size: 14px; /* Yazı boyutu */
+  padding-top: 20px; /* Üstten boşluk */
+}
+
+.pages {
+  margin-bottom: 10px; /* Sayfa linklerinin altına boşluk */
+}
+
+.pages a {
+  margin: 0 8px; /* Her linkin sağına ve soluna boşluk */
+  text-decoration: none; /* Altı çizili olmasın */
+  color: white; /* Yazı rengi beyaz */
+}
+
+.pages a:hover {
+  text-decoration: underline; /* Üzerine gelince altı çizilsin */
+}
+
+.copyright {
+  font-size: 12px; /* Daha küçük yazı */
+}
